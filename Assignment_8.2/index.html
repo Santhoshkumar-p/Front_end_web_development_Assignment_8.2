@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 8.2</title>
+		<script src="jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body onload="initialLoad()">
+	<center>
+	<div>
+		<h1> MySelfieTech </h1>
+		
+		<div id="main">
+			<button onclick="login()">Login</button>
+			<button onclick="signup()">SignUp</button>
+		</div>
+
+		<div id="login">
+			<label>Login</label>
+			<form onsubmit="loginSubmit()" action="#">
+				<input type="email" id="login-email" placeholder="Email" required><br>
+				<input type="password" id="login-password" placeholder="Password" required><br>
+				<input type="submit">
+			</form>
+			<label id="errorMsg"></label>
+			<button class="back-button" onclick="initialLoad()">back</button>
+		</div>
+
+		<div id="signup">
+			<label>SignUp</label>
+			<form onsubmit="signupSubmit()" action="#">
+				<input type="text" id="signup-name" placeholder="Name" required><br>
+				<input type="email" id="signup-email" placeholder="Email" required><br>
+				<input type="password" id="signup-password" placeholder="Password" required><br>
+				<input type="submit">
+			</form>
+			<button class="back-button" onclick="initialLoad()">back</button>
+		</div>
+
+		<div id="home">
+			<label> Welcome to <span id="loggedInUser"></span> </label>
+			<div>
+				<button class="back-button" onclick="logout()">Logout</button>
+			</div>
+		</div>
+
+	</div>
+	</center>
+	
+	</body>
+</html>
